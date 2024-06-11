@@ -13,6 +13,9 @@ main{
     justify-content: center;
 }
 
+
+
+
 #btn{
     background-color: #d173e9;
     font-weight: 800;
@@ -21,16 +24,15 @@ main{
     font-size: 1rem;
     text-decoration: none;
     color: antiquewhite;
-    position: relative;
     overflow: hidden;
-}
-
-.btn button{
+    cursor: pointer;
     position: relative;
-    z-index: 1;
 }
 
-.btn:before{
+
+
+.btn::before{
+    
     content: '';
     position: absolute;
     background-color: orangered;
@@ -44,8 +46,13 @@ main{
 }
 
 
-.btn:hover:before{
+.btn:hover::before{
     width: 300px;
     height: 300px;
+}
+
+.btn span{
+    position: relative;
+    z-index: 1;
 }
 
